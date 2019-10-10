@@ -1,0 +1,214 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+$dark-color: #353436;
+$text-color: #ffffff;
+$activ-text-color: #e2d1a6;
+$dark-text-color: #aeadad;
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+p {
+    font-family: 'Open Sans', serif;
+}
+body {
+}
+.area {
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    color: $text-color;
+    margin: 0 auto;
+    padding: 5px 0 4px;
+    &__title {
+        font-family: 'Open Sans', serif;
+        text-decoration: none;
+        color: $text-color;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-right: 10px;
+    }
+    &__img {
+        width: 9px;
+        height: 13px;;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+// modal window 
+.modal {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $text-color;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.7);
+	display: none;
+    pointer-events: none;
+    text-align: center;
+    font-family: 'Open Sans', serif;
+    &:target {
+        display: block;
+        pointer-events: auto;
+    }
+    &-content {
+        width: 595px;
+        height: 355px;
+        position: relative;
+        margin: 10% auto;
+        padding: 13px 15px 26px;
+        background: $dark-color;
+        @media(max-width:650px) {
+            height: 550px;
+            width: 270px;
+        }
+        h3 {
+            font-size: 27px;
+            font-family: 'Playfair', serif;
+            font-weight: 400;
+        }
+        &__form {
+            max-width: 440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; 
+            @media(max-width:650px) {
+                display: flex;
+                flex-direction: column;
+                max-width: 185px;
+            }
+        }
+        
+        &__login {
+            display: flex;
+            flex-direction: column;
+            h4 {
+                font-size: 18px;
+                font-weight: 400;
+                padding: 16px 0;
+                font-family: 'Playfair', serif;
+                text-align: left;
+            }
+        }
+        &__desc {
+            color: $dark-text-color;
+            font-size: 15px;
+            text-align: left;
+        }
+        &__item {
+            width: 164px;
+            height: 18px;
+            border: 0;
+            outline: none;
+            padding: 6px 10px;
+            margin-bottom: 7px;
+            &_padd {
+                margin-bottom: 12px;
+            }
+        }
+        &__btn {
+            width: 184px;
+            height: 30px;
+            border: 0;
+            outline: none;
+            margin: 15px 0;
+            background-color: #000000;
+            color: $text-color;
+            &:active {
+                background-color: $dark-text-color;
+            }
+            &_mar {
+                margin: 10px 0 15px;
+            }
+        }
+        &-chekbox {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 10px;
+            color: $dark-text-color;
+            padding-bottom: 12px;
+            &__input {
+                margin-right: 3px;
+            }
+        }
+        &__close {
+            background: url(../img/close.png);
+            color: #FFFFFF;
+            position: absolute;
+            right: 12px;
+            text-align: center;
+            top: 16px;
+            width: 23px;
+            height: 22px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+    }
+}
+
+
+
+.close:hover { background: #00d9ff; }
+// end modal window 
+
+
+
+
+.wrap {
+    background-color: $dark-color;
+    padding: 0 20px;
+}
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    &__logo {
+        display: block;
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        width: 283px;
+        height: 83px;
+        padding: 20px 0 3px;
+    }
+    &-menu {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 16px;
+        &__item {
+            text-transform: uppercase;
+            color: $text-color;
+            margin-left: 25px; 
+            padding-bottom: 5px;
+            font-family: 'Open Sans', serif;
+            font-size: 18px; 
+        }
+        &__link {
+            color: $text-color;
+            text-decoration: none;
+        }
+        &_active {
+            color: $activ-text-color;
+        }
+    }
+    
+    
+}
