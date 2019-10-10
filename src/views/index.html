@@ -25,6 +25,7 @@
         <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="stylesheet" href="../styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
         <header>
@@ -75,13 +76,26 @@
                 </div>
             </div>
         </header>
+            <div class="page">
+                <div class="carousel">
+                        <div class="carousel-thumb">
+                            <img src="../img/room.png" alt="">
+                        </div>
+                        <div class="carousel-thumb">
+                            <img src="../img/room.png" alt="">
+                        </div>
+                        <div class="carousel-thumb">
+                            <img src="../img/room.png" alt="">
+                        </div>
+                </div>
+            </div>
 
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
                 $(document).ready(function(){
-                  $('.block-carousel').slick({
+                  $('.carousel').slick({
                     dots: true,
                     arrows: false,
                   });

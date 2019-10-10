@@ -18,8 +18,7 @@ h1, h2, h3, h4, p {
 p {
     font-family: 'Open Sans', serif;
 }
-body {
-}
+
 .area {
     max-width: 1200px;
     display: flex;
@@ -209,6 +208,11 @@ body {
             color: $activ-text-color;
         }
     }
-    
-    
+}
+.page {
+    background-color: $dark-color;
+}
+.carousel {
+    max-width: 1240px;
+    margin: 0 auto;
 }
