@@ -10,6 +10,8 @@ $dark-color: #353436;
 $text-color: #ffffff;
 $activ-text-color: #e2d1a6;
 $dark-text-color: #aeadad;
+$btn-dark-color: #000000;
+$visited-link: #f0b114;
 
 h1, h2, h3, h4, p {
     padding: 0;
@@ -18,7 +20,14 @@ h1, h2, h3, h4, p {
 p {
     font-family: 'Open Sans', serif;
 }
-
+a {
+    &:active {
+        color: $visited-link;
+    }
+}
+body {
+    background-color: $dark-color;
+}
 .area {
     max-width: 1200px;
     display: flex;
@@ -178,20 +187,37 @@ p {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2px;
+    @media(max-width:950px) {
+        flex-direction: column;
+    }
     &__logo {
         display: block;
         background-image: url(../img/logo.png);
         background-repeat: no-repeat;
         width: 283px;
         height: 83px;
-        padding: 20px 0 3px;
+        padding: 20px 0 0;
+        @media(max-width:950px) {
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
     }
     &-menu {
+        padding-top: 60px;
+        padding-bottom: 16px;
+    }
+    &-list {
         list-style-type: none;
         display: flex;
         align-items: flex-end;
-        padding-bottom: 16px;
+        @media(max-width:950px) {
+            margin: 0 auto;
+        }
+        @media(max-width:850px) {
+            flex-direction: column;
+            margin: 0 auto;
+        }
         &__item {
             text-transform: uppercase;
             color: $text-color;
@@ -199,20 +225,178 @@ p {
             padding-bottom: 5px;
             font-family: 'Open Sans', serif;
             font-size: 18px; 
+            position: relative;
+            @media(max-width:850px) {
+                margin: 0 auto;
+            }
+            // &:hover > .header-list__sub  {
+            //     display: block; }
+            // }
         }
         &__link {
             color: $text-color;
             text-decoration: none;
+            &_sub {
+                font-size: 16px;
+                font-family: 'Open Sans', serif;
+            }
+            &:hover {
+                color: $activ-text-color;
+            }
         }
-        &_active {
-            color: $activ-text-color;
+        &__sub {
+            position: absolute;
+
+            display: none;
+            z-index: 1;
+            // top: 127px;
+            // right: 412px;
+            background-color: $dark-color;
+            max-width: 138px;
+            list-style-type: none;
+            padding: 6px 6px 6px 6px;
+            &>li {
+                padding: 5px 0;
+                border-bottom: 1px solid $text-color;
+                &:last-child {
+                    border: none;
+                    padding-bottom: 4px;
+                }
+            }
+            
         }
     }
 }
-.page {
+
+
+.tu {
+    position: relative;
+}
+.tuto {
+    position: absolute;
+    z-index: 1;
+    top: 127px;
+    right: 412px;
     background-color: $dark-color;
+    width: 138px;
+    list-style-type: none;
+    padding: 6px 6px 6px 6px;
+}
+.page {
+    max-width: 1240px;
+    position: relative;
+    margin: 0 auto;
 }
 .carousel {
-    max-width: 1240px;
-    margin: 0 auto;
+    position: relative;
+    &__title {
+        background: rgba(255, 255, 255, 0.7);
+        width: 509px;
+        height: 140px;
+        position: absolute;
+        z-index: 1;
+        top: 251px;
+        right: 0;
+        h2 {
+            text-transform: uppercase;
+            font-family: 'Playfair', serif;
+            padding: 19px 28px;
+            font-size: 30px; 
+            font-style: italic;
+        }
+    }
+    &__text {
+        padding: 2px 28px;
+        line-height: 23px;
+        font-size: 18px; 
+        font-family: 'Open Sans', serif;
+    }
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    position: absolute;
+    z-index: 1;
+    left: 47%;
+    margin-top: -60px;
+    &>li {
+        margin: 0 5px;
+        button {
+            text-indent: -9999px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid $btn-dark-color;
+            background-color: $text-color;
+            border-radius: 50%;
+            line-height: 10px;
+            font-size: 0;
+            padding: 3px 0;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &>li.slick-active {
+        button {
+            background-color: $activ-text-color;
+        }
+    }
+}
+
+.carousel-arrow {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $text-color;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.7);
+	display: none;
+    pointer-events: none;
+    text-align: center;
+    font-family: 'Open Sans', serif;
+    &:target {
+        display: block;
+        pointer-events: auto;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 46%;
+        border: none;
+    }
+    &__content {
+        width: 595px;
+        height: 355px;
+        position: relative;
+        margin: 10% auto;
+        padding: 13px 15px 26px;
+        background: $dark-color;
+    }
+}
+
+
+
+.hide-show {
+    display: none;
+}
+
+.hide-show:target {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    height: 100px;;
 }

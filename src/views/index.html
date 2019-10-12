@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="stylesheet" href="../styles/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
@@ -66,29 +66,62 @@
                 </div>
                 <div class="header">
                     <a href="" class="header__logo"></a>
-                    <ul class="header-menu">
-                        <li class="header-menu__item"><a href="" class="header-menu__link header-menu_active">Home</a></li>
-                        <li class="header-menu__item"><a href="" class="header-menu__link">Azienda</a></li>
-                        <li class="header-menu__item"><a href="" class="header-menu__link">Collezioni</a></li>
-                        <li class="header-menu__item"><a href="" class="header-menu__link">News</a></li>
-                        <li class="header-menu__item"><a href="" class="header-menu__link">Contatti</a></li>
-                    </ul>
+                    <nav class="header-menu">
+                        <ul  class="header-list">
+                            <li class="header-list__item"><a href="" class="header-list__link">Home</a></li>
+                            <li class="header-list__item"><a href="" class="header-list__link">Azienda</a></li>
+                                <ul class="header-list__sub">
+                                    <li><a href="#" class="header-list__link header-list__link_sub">STORIA</a></li>
+                                    <li><a href="#" class="header-list__link header-list__link_sub">MM DESIGN</a></li>
+                                    <li><a href="#" class="header-list__link header-list__link_sub">DESIGNER</a></li>
+                                    <li><a href="#" class="header-list__link header-list__link_sub">CERTIFICAZIONI</a></li>
+                                </ul>
+                            <li class="header-list__item"><a href="#" class="header-list__link">Collezioni</a></li>
+                            <li class="header-list__item"><a href="#" class="header-list__link">News</a></li>
+                            <li class="header-list__item"><a href="#" class="header-list__link">Contatti</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
-            <div class="page">
-                <div class="carousel">
-                        <div class="carousel-thumb">
-                            <img src="../img/room.png" alt="">
-                        </div>
-                        <div class="carousel-thumb">
-                            <img src="../img/room.png" alt="">
-                        </div>
-                        <div class="carousel-thumb">
-                            <img src="../img/room.png" alt="">
-                        </div>
-                </div>
+        <div class="page">
+            <div class="carousel">
+                    <div class="carousel-thumb">
+                        <img src="../img/room.png" alt="">
+                    </div>
+                    <div class="carousel-thumb">
+                        <img src="../img/room.png" alt="">
+                    </div>
+                    <div class="carousel-thumb">
+                        <img src="../img/room.png" alt="">
+                    </div>
             </div>
+            <div class="carousel__title">
+                <h2>Lampadari contemporanei</h2>
+                <p class="carousel__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+            </div>
+                <a href="#block1" class="carousel-arrow__img arrow"><img class="" src="../img/arrow.png" alt="AREA RISERVATA"></a>
+                <div class="">
+                    
+                </div>
+                
+                                
+        </div>
+        <footer class="footer">
+                <a href="#block1">Show hidden text</a>
+                <a href="#block2">Show another text</a>
+                
+                <div id="block2" class="hide-show">
+                    Another hidden text
+                </div>
+                
+                <div id="block1" class="hide-show">
+                    This is a hidden text
+                </div>
+        </footer>
+       
+
+
 
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
