@@ -69,13 +69,14 @@
                     <nav class="header-menu">
                         <ul  class="header-list">
                             <li class="header-list__item"><a href="" class="header-list__link">Home</a></li>
-                            <li class="header-list__item"><a href="" class="header-list__link">Azienda</a></li>
+                            <li class="header-list__item"><a href="" class="header-list__link">Azienda</a>
                                 <ul class="header-list__sub">
                                     <li><a href="#" class="header-list__link header-list__link_sub">STORIA</a></li>
                                     <li><a href="#" class="header-list__link header-list__link_sub">MM DESIGN</a></li>
                                     <li><a href="#" class="header-list__link header-list__link_sub">DESIGNER</a></li>
                                     <li><a href="#" class="header-list__link header-list__link_sub">CERTIFICAZIONI</a></li>
                                 </ul>
+                            </li>
                             <li class="header-list__item"><a href="#" class="header-list__link">Collezioni</a></li>
                             <li class="header-list__item"><a href="#" class="header-list__link">News</a></li>
                             <li class="header-list__item"><a href="#" class="header-list__link">Contatti</a></li>
@@ -100,27 +101,64 @@
                 <h2>Lampadari contemporanei</h2>
                 <p class="carousel__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
             </div>
-                <a href="#block1" class="carousel-arrow__img arrow"><img class="" src="../img/arrow.png" alt="AREA RISERVATA"></a>
-                <div class="">
-                    
-                </div>
+            <div class="hidden-block__img" onclick="toggleClass()"><img class="" src="../img/arrow.png" alt="arrow"></div>
+            <div class="hidden-block">
+                    <!-- <div class="hidden-block__img hidden-block__img_top"><img class="" src="../img/arrow.png" alt="arrow"></div> -->
+                    <div class="hidden-block__content">
+                        <div class="hidden-block__item">
+                            <h2 class="hidden-block__title">Stai pensando ad un progetto?</h2>
+                            <p class="hidden-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+                            <a class="hidden-block__link" href="#">Approfondisci</a>
+                        </div>
+                        <div class="hidden-block__item">
+                                <h2 class="hidden-block__title">Vi aspettiamo alla fiera Euroluce</h2>
+                                <p class="hidden-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+                                <a class="hidden-block__link" href="#">Approfondisci</a>
+                        </div>
+                        <div class="hidden-block__item">
+                                <h2 class="hidden-block__title">Scopri la nuova collezione</h2>
+                                <p class="hidden-block__text"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+                                <a class="hidden-block__link hidden-block__link_end" href="#">Approfondisci</a>
+                        </div>
+                    </div>
+            </div>
                 
                                 
         </div>
         <footer class="footer">
-                <a href="#block1">Show hidden text</a>
-                <a href="#block2">Show another text</a>
-                
-                <div id="block2" class="hide-show">
-                    Another hidden text
-                </div>
-                
-                <div id="block1" class="hide-show">
-                    This is a hidden text
-                </div>
+            <div class="footer__item">
+                <h3 class="footer__title">Lampadari made in italy</h3>
+                <p  class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+            </div>
+            <div class="footer__item">
+                <h3 class="footer__title">lampadari artigianali</h3>
+                <p  class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+            </div>
+            <div class="footer__item">
+                <h3 class="footer__title">45 anni di esperienza</h3>
+                <p  class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+            </div>
+            <div class="footer__item">
+                <h3 class="footer__title">NEWSLETTER</h3>
+                <input class="modal-content__item modal-content__item_padd" type="text" name="" placeholder="Nome e Cognome">
+                    <input class="modal-content__item modal-content__item_padd" type="text" name="" placeholder="E-email">
+                    <div class="modal-content-chekbox">
+                        <input class="modal-content-chekbox__input" type="checkbox">
+                        <p>Acconsento al trattamento dei dati</p>
+                    </div>
+                    <button class="modal-content__btn modal-content__btn_mar">ISCRIVITI</button>
+            </div>
+
         </footer>
        
-
+        <script>
+                const item = this.document.querySelector('.hidden-block');
+            
+            function toggleClass() {
+              console.log(item);
+              item.classList.toggle('active');
+            }
+        </script>
 
 
         <script src="../js/main.js"></script>
