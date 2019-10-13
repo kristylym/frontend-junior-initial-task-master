@@ -86,22 +86,23 @@
             </div>
         </header>
         <div class="page">
-            <div class="carousel">
-                    <div class="carousel-thumb">
-                        <img src="../img/room.png" alt="">
+                    <div class="carousel">
+                            <div class="carousel-thumb">
+                                <img src="../img/room.png" alt="">
+                            </div>
+                            <div class="carousel-thumb">
+                                <img src="../img/room.png" alt="">
+                            </div>
+                            <div class="carousel-thumb">
+                                <img src="../img/room.png" alt="">
+                            </div>
                     </div>
-                    <div class="carousel-thumb">
-                        <img src="../img/room.png" alt="">
-                    </div>
-                    <div class="carousel-thumb">
-                        <img src="../img/room.png" alt="">
-                    </div>
-            </div>
+                    <div class="hidden-block__img" onclick="toggleClass()"><img class="" src="../img/arrow.png" alt="arrow"></div>  
+            
             <div class="carousel__title">
                 <h2>Lampadari contemporanei</h2>
                 <p class="carousel__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
             </div>
-            <div class="hidden-block__img" onclick="toggleClass()"><img class="" src="../img/arrow.png" alt="arrow"></div>
             <div class="hidden-block">
                     <!-- <div class="hidden-block__img hidden-block__img_top"><img class="" src="../img/arrow.png" alt="arrow"></div> -->
                     <div class="hidden-block__content">
@@ -116,14 +117,12 @@
                                 <a class="hidden-block__link" href="#">Approfondisci</a>
                         </div>
                         <div class="hidden-block__item">
-                                <h2 class="hidden-block__title">Scopri la nuova collezione</h2>
-                                <p class="hidden-block__text"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
-                                <a class="hidden-block__link hidden-block__link_end" href="#">Approfondisci</a>
+                                <h2 class="hidden-block__title">Scopri la nuova collezione<br><br></h2>
+                                <p class="hidden-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+                                <a class="hidden-block__link" href="#">Approfondisci</a>
                         </div>
                     </div>
-            </div>
-                
-                                
+            </div>                   
         </div>
         <footer class="footer">
             <div class="footer__item">
@@ -140,26 +139,56 @@
             </div>
             <div class="footer__item">
                 <h3 class="footer__title">NEWSLETTER</h3>
-                <input class="modal-content__item modal-content__item_padd" type="text" name="" placeholder="Nome e Cognome">
-                    <input class="modal-content__item modal-content__item_padd" type="text" name="" placeholder="E-email">
-                    <div class="modal-content-chekbox">
-                        <input class="modal-content-chekbox__input" type="checkbox">
+                <div class="footer-form">
+                <input class="footer-form__item footer-form__item_padd" type="text" name="" placeholder="Nome e Cognome">
+                    <input class="footer-form__item footer-form__item_bot" type="text" name="" placeholder="E-email">
+                    <div class="footer-form-chekbox">
+                        <input class="footer-form-chekbox__input" type="checkbox">
                         <p>Acconsento al trattamento dei dati</p>
                     </div>
-                    <button class="modal-content__btn modal-content__btn_mar">ISCRIVITI</button>
+                    <button class="footer-form__btn footer-form__btn_mar">ISCRIVITI</button>
+                </div>
             </div>
-
         </footer>
+        <div class="block-desc">
+            <div class="block-desc__item">
+                <ul class="block-desc__list" >
+                    <li class="block-desc__text">MMLAMPADARI srl </li>
+                    <li class="block-desc__text">Via Feltrina 00 </li>
+                    <li class="block-desc__text">31111 Pederobba  (TV)</li>
+                    <li class="block-desc__text">0423.123456</li>
+                    <li class="block-desc__text">info@mmlampadari.mm</li>
+                    <li class="block-desc__text">P.IVA 04123456789</li>
+                </ul>
+            </div>
+            <div class="block-desc__item">
+                <ul class="block-desc__social">
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+            <div class="block-desc__item">
+                    <ul class="block-desc__lang" >
+                        <li class="block-desc__lang_text"><a href=""></a>ITA</a></li>
+                        <li class="block-desc__lang_text"></a>ENG</a></li>
+                        <li class="block-desc__lang_text"></a>DEU</a></li>
+                        <li class="block-desc__lang_text"></a>RUS</a></li>
+                    </ul>
+                </div>
+        </div>
        
         <script>
                 const item = this.document.querySelector('.hidden-block');
-            
+            const arrow = this.document.querySelector('.hidden-block__img');
             function toggleClass() {
               console.log(item);
               item.classList.toggle('active');
+              arrow.style.bottom = item.offsetHeight + 'px';
+              arrow.classList.add('hidden-block__img_active')
             }
         </script>
-
+<script src="https://kit.fontawesome.com/c7ee97b8d0.js" crossorigin="anonymous"></script>
 
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -17,6 +17,9 @@ h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
+h1, h2, h3, h4 {
+    font-family: 'Playfair', serif;
+}
 p {
     font-family: 'Open Sans', serif;
 }
@@ -33,10 +36,8 @@ body {
     display: flex;
     justify-content: flex-end;
     color: $text-color;
-    margin: 0 auto;
-    padding: 4px 3px;
+    margin: 4px auto;
     &__title {
-        font-family: 'Open Sans', serif;
         text-decoration: none;
         color: $text-color;
         font-size: 14px;
@@ -58,7 +59,6 @@ body {
 // modal window 
 .modal {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -69,7 +69,7 @@ body {
 	display: none;
     pointer-events: none;
     text-align: center;
-    font-family: 'Open Sans', serif;
+
     &:target {
         display: block;
         pointer-events: auto;
@@ -87,7 +87,6 @@ body {
         }
         h3 {
             font-size: 27px;
-            font-family: 'Playfair', serif;
             font-weight: 400;
         }
         &__form {
@@ -109,7 +108,6 @@ body {
                 font-size: 18px;
                 font-weight: 400;
                 padding: 16px 0;
-                font-family: 'Playfair', serif;
                 text-align: left;
             }
         }
@@ -194,7 +192,6 @@ body {
         background-repeat: no-repeat;
         width: 283px;
         height: 83px;
-        padding: 20px 0 0;
         @media(max-width:950px) {
             flex-direction: column;
             max-width: 300px;
@@ -221,7 +218,6 @@ body {
             color: $text-color;
             margin-left: 25px; 
             padding-bottom: 5px;
-            font-family: 'Open Sans', serif;
             font-size: 18px; 
             position: relative;
             @media(max-width:850px) {
@@ -236,7 +232,6 @@ body {
             text-decoration: none;
             &_sub {
                 font-size: 16px;
-                font-family: 'Open Sans', serif;
             }
             &:hover {
                 color: $activ-text-color;
@@ -272,25 +267,22 @@ body {
     position: relative;
     &__title {
         background: rgba(255, 255, 255, 0.7);
-        width: 509px;
-        height: 140px;
+        width: 453px;
         position: absolute;
         z-index: 1;
         top: 251px;
         right: 0;
+        padding: 16px 28px 21px;
         h2 {
             text-transform: uppercase;
-            font-family: 'Playfair', serif;
-            padding: 16px 28px;
             font-size: 30px; 
             font-style: italic;
         }
     }
     &__text {
-        padding: 7px 28px;
+        padding-top: 23px;
         line-height: 23px;
-        font-size: 18px; 
-        font-family: 'Open Sans', serif;
+        font-size: 18px;
     }
 }
 .slick-dots {
@@ -328,7 +320,6 @@ body {
 
 .carousel-arrow {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -339,7 +330,6 @@ body {
 	display: none;
     pointer-events: none;
     text-align: center;
-    font-family: 'Open Sans', serif;
     &:target {
         display: block;
         pointer-events: auto;
@@ -361,15 +351,20 @@ body {
     bottom: 0;
     left: 20px;
     width: 1200px;
-    // display: none;
+    display: none;
     
     &__img {
         position: absolute;
+        z-index: 3;
         bottom: 0;
         left: 46%;
         border: none;
-        height: 29px;
+        height: 28px;
         cursor: pointer;
+        &_active {
+            transform: rotate(180deg);
+            height: 25px;
+        }
         
     }
     &__content {
@@ -378,7 +373,7 @@ body {
         min-height: 173px;
     }
     &__item {
-        padding: 16px 20px 13px 14px;
+        padding: 15px 20px 11px 14px;
         &:nth-child(1) {
             background-color: $activ-text-color;
             color: $btn-dark-color;
@@ -414,13 +409,12 @@ body {
     }
     &__title {
         font-size: 29px;
-        margin: 0 25px 5px 0;
+        padding: 0 25px 3px 0;
         line-height: 31px;
         letter-spacing: 0.3px;
-        font-family: 'Playfair', serif;
     }
     &__text {
-        padding-bottom: 10px;
+        padding-bottom: 14px;
         line-height: 25px;
     }
     &__link {
@@ -428,8 +422,9 @@ body {
         justify-content: flex-end;
         text-decoration: none;
         color: $btn-dark-color;
-        font-family: 'Open Sans', serif;
         font-size: 18px;
+        font-family: 'Open Sans', serif;
+
     }
   }
   .hidden-block.active {
@@ -441,20 +436,14 @@ body {
 
 .footer {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 34px auto 10px;
     display: flex;
     justify-content: space-around;
-    padding-top: 34px;
-    padding-bottom: 50px;
     color: $dark-text-color;
     &__item {
         flex-basis: 18%;
-        &:nth-child(4) {
-            padding-bottom: 48px;   
-        }
     }
     &__title {
-        font-family: 'Playfair', serif;
         font-size: 14px;
         text-transform: uppercase;
         padding-bottom: 22px;
@@ -464,5 +453,96 @@ body {
     &__text {
         line-height: 18px;
         font-size: 11px;
+    }
+    &__form {
+        margin-top: 5px;
+    }
+}
+
+.footer-form {
+    margin-top: 4px;;
+    &__item {
+        width: 175px;
+        height: 18px;
+        border: 0;
+        outline: none;
+        padding: 7px 4px;
+        margin-bottom: 7px;
+        &_padd {
+            margin-bottom: 12px;
+        }
+        &_bot {
+            margin-bottom: 8px;
+        }
+    }
+    &__btn {
+        width: 184px;
+        height: 30px;
+        border: 0;
+        outline: none;
+        margin: 15px 0;
+        background-color: #000000;
+        color: $text-color;
+        &:active {
+            background-color: $dark-text-color;
+        }
+        &_mar {
+            margin: 8px 0 15px;
+        }
+    }
+    &-chekbox {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 10px;
+        color: $dark-text-color;
+        margin-bottom: 0px;
+        &__input {
+            margin-right: 3px;
+        }
+    }
+}
+.block-desc {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        list-style-type: none;
+        font-size: 12px;
+        padding-top: 5px;
+        color: $dark-text-color;
+        font-family: 'Open Sans', serif;
+    }
+    &__text {
+        margin-right: 14px;
+        
+    }
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        &>li {
+            margin-right: 10px;
+            a   {
+            color: $text-color;
+            }
+         }
+    }
+    &__lang {
+        list-style-type: none;
+        display: flex;
+        color: $text-color;
+        &_text {
+            font-family: 'Open Sans', serif;
+            font-size: 14px;
+            padding: 0 10px;
+            // margin-right: 10px;
+            border-right: 1px solid $text-color;
+            
+            a   {
+            color: $text-color;
+            }
+         }
     }
 }
