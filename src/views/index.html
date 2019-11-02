@@ -48,25 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="header">
-                    <a href="" class="header__logo"></a>
-                    <nav class="header-menu">
-                        <ul  class="header-list">
-                            <li class="header-list__item"><a href="" class="header-list__link">Home</a></li>
-                            <li class="header-list__item"><a href="" class="header-list__link">Azienda</a>
-                                <ul class="header-list__sub">
-                                    <li><a href="#" class="header-list__link header-list__link_sub">STORIA</a></li>
-                                    <li><a href="#" class="header-list__link header-list__link_sub">MM DESIGN</a></li>
-                                    <li><a href="#" class="header-list__link header-list__link_sub">DESIGNER</a></li>
-                                    <li><a href="#" class="header-list__link header-list__link_sub">CERTIFICAZIONI</a></li>
-                                </ul>
-                            </li>
-                            <li class="header-list__item"><a href="#" class="header-list__link">Collezioni</a></li>
-                            <li class="header-list__item"><a href="#" class="header-list__link">News</a></li>
-                            <li class="header-list__item"><a href="#" class="header-list__link">Contatti</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                @@include("../blocks/modules/header/header.html")
             </div>
         </header>
         <div class="page">
@@ -160,10 +142,7 @@
                     </ul>
                 </div>
         </div>
-       
-       
-<script src="https://kit.fontawesome.com/c7ee97b8d0.js" crossorigin="anonymous"></script>
-
+        <script src="https://kit.fontawesome.com/c7ee97b8d0.js" crossorigin="anonymous"></script>
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -175,7 +154,7 @@
                   });
                 });
                
-                const item = this.document.querySelector('.hidden-block');
+            const item = this.document.querySelector('.hidden-block');
             const arrow = this.document.querySelector('.hidden-block__img');
             function toggleClass() {
               console.log(item);
